@@ -609,7 +609,7 @@
           !this.$el.contains($event.target) &&
           this.$refs.dropdown &&
           !this.$refs.dropdown.contains($event.target)) {
-          this.clickCancel()
+          this.togglePicker(false, true)
         }
       },
       clickRange (value) {
@@ -660,7 +660,7 @@
       },
       handleEscape (e) {
         if (this.open && e.keyCode === 27 && this.closeOnEsc) {
-          this.clickCancel()
+          this.togglePicker(false, true)
         }
       }
     },
